@@ -1,5 +1,5 @@
 function defaultfunc() {
-  document.getElementById("search").action = "https://duckduckgo.com/search";
+  document.getElementById("search").action = "https://duckduckgo.com/";
 }
 
 function dropdownSelect(){

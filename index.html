@@ -2,13 +2,17 @@
 <html>
 <head>
 <title>Home</title>
-<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link rel="stylesheet" type="text/css" href="styles/Link&Zelda.css">
 <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
 <script src="scripts/functions.js"></script>
 <script src="scripts/jquery-2.1.4.min.js"></script>
 </head>
 
 <body onload="defaultfunc()">
+    <select id="styleSource" onchange="dropdownStyleSelect()" class="styleselect">
+       <option value="styles/Link&Zelda.css" selected>Link & Zelda</option>
+       <option value="styles/Blues.css">Blues</option>
+    </select>
    <div class="container2">
       <form method="get" id="search" class="formsearchbar">
         <input id="duckduckgosearch" type="search" name="q" class="searchbar" placeholder="Search..." autofocus="autofocus" autocomplete="off"></input>
@@ -20,7 +24,6 @@
         </select>
       </form>
       <div class="tiles">
-
         <div class="row">
           <div class="boxes box1">
             <h2 class="header">Entertainment</h2>

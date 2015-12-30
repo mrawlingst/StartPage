@@ -1,10 +1,32 @@
 function defaultfunc() {
   document.getElementById("search").action = "https://duckduckgo.com/";
+  
+  var loadedStyle = localStorage.getItem("style");
+  if (loadedStyle == null) {
+      localStorage.setItem("style", document.getElementById('styleSource').value);
+  }
+  changeStyle(localStorage.getItem("style"));
 }
 
 function dropdownSelect(){
   var x = document.getElementById('searchSource').value;
   document.getElementById("search").action = x;
+}
+
+function dropdownStyleSelect() {
+    changeStyle(document.getElementById('styleSource').value);
+}
+
+function changeStyle(x) {
+    var oldstyle = document.getElementsByTagName("link").item(0);
+    
+    var newstyle = document.createElement("link");
+    newstyle.setAttribute("rel", "stylesheet");
+    newstyle.setAttribute("type", "text/css");
+    newstyle.setAttribute("href", x);
+    
+    document.getElementsByTagName("head").item(0).replaceChild(newstyle, oldstyle);
+    localStorage.setItem("style", x);
 }
 
 function getSomeTime() {

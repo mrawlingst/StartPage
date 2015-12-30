@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/wallpaper.png");
+  background-image: url("../images/wallpaper-link&zelda.png");
   background-size: cover;
   word-wrap: break-word;
   overflow: visible;
@@ -41,6 +41,22 @@ li {
   background-color: rgba(0,50,0,0.1);
   color: rgba(0,50,0,0.6);
   width: 17.6%;
+  padding: 5px 5px 5px 5px;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  cursor: pointer;
+  text-align: center;
+}
+.styleselect {
+  position: absolute;
+  border: 0;
+  box-shadow: none;
+  background-color: rgba(0,50,0,0.1);
+  color: rgba(0,50,0,0.6);
+  width: 5%;
+  right: 0px;
+  top: 0px;
   padding: 5px 5px 5px 5px;
   -webkit-appearance:none;
   -moz-appearance:none;

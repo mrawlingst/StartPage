@@ -89,6 +89,14 @@ li {
   text-align: left;
   font-size: 100%;
 }
+.col3 {
+  -moz-column-count: 3;
+  -moz-column-gap: 40px;
+}
+.col4 {
+  -moz-column-count: 4;
+  -moz-column-gap: 40px;
+}
 .boxes {
   display: inline-block;
   background-color: rgba(240, 240, 240, 1);

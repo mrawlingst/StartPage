@@ -6,18 +6,6 @@
 <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
 <script src="scripts/functions.js"></script>
 <script src="scripts/jquery-2.1.4.min.js"></script>
-
-<script>
-
-  $.getJSON("http://api.theysaidso.com/qod.json", function(data) {
-
-  var quote = data.contents.quote;
-  var source = data.contents.author;
-
-  document.getElementById("bigBox").innerHTML = quote + " - " + source;
-
-});
-</script>
 </head>
 
 <body onload="defaultfunc()">

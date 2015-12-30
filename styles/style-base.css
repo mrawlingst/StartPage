@@ -35,34 +35,26 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
-.searchselect {
+.select {
   border: 0;
   box-shadow: none;
   background-color: rgba(0,50,0,0.1);
   color: rgba(0,50,0,0.6);
-  width: 17.6%;
-  padding: 5px 5px 5px 5px;
   -webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
   cursor: pointer;
   text-align: center;
 }
+.searchselect {
+  width: 17.6%;
+  padding: 5px 5px 5px 5px;
+}
 .styleselect {
   position: absolute;
-  border: 0;
-  box-shadow: none;
-  background-color: rgba(0,50,0,0.1);
-  color: rgba(0,50,0,0.6);
   width: 5%;
   right: 0px;
   top: 0px;
-  padding: 5px 5px 5px 5px;
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  cursor: pointer;
-  text-align: center;
 }
 .formsearchbar{
   background-color: inherit;

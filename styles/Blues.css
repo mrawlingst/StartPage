@@ -35,12 +35,11 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
-.searchselect {
+.select {
   border: 0;
   box-shadow: -3px 4px 0px 0px rgba(0,0,0,0.45);
   background-color: rgba(57, 166, 202, 0.5);
   color: white;
-  width: 17.6%;
   padding: 5px 5px 5px 5px;
   -webkit-appearance:none;
   -moz-appearance:none;
@@ -48,21 +47,14 @@ li {
   cursor: pointer;
   text-align: center;
 }
+.searchselect {
+  width: 17.6%;
+}
 .styleselect {
   position: absolute;
-  border: 0;
-  box-shadow: -3px 4px 0px 0px rgba(0,0,0,0.45);
-  background-color: rgba(57, 166, 202, 0.5);
-  color: white;
   width: 5%;
   right: 0px;
   top: 0px;
-  padding: 5px 5px 5px 5px;
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  cursor: pointer;
-  text-align: center;
 }
 .formsearchbar{
   background-color: inherit;

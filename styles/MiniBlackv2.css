@@ -1,0 +1,133 @@
+body {
+    background-color: #303030; /* Color of the background */
+    background-image: url("../images/miniblackv2.png");
+    word-wrap: break-word;
+    overflow: visible;
+}
+hr {
+    width: 80%;
+    border-color: rgba(0,0,0,0.25); /* Color of horizontal rule */
+    background-color: rgba(0,0,0,0.05); /* Color of horizontal rule's background */
+    box-shadow: none; /* Shadow for horizontal rule */
+}
+a:link {
+    color: rgba(200, 200, 200, 1); /* Color of link */
+}
+a:visited {
+    color: rgba(200, 200, 200, 1); /* Color of visited link */
+}
+a:hover {
+    color: rgba(200, 200, 200, 1); /* Color of the link hovered */
+    letter-spacing: 0.7px; /* Spacing of the link hovered */
+}
+a:active {
+    color: rgba(200, 200, 200, 1); /* Color of link when clicked */
+}
+li {
+    margin-bottom: 5px;
+}
+
+.container2 {
+    max-height: 80vh;
+    max-width: 90vw;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.select {
+    border: 0;
+    box-shadow: none;
+    background-color: #424242; /* Background color of dropdown list */
+    color: rgba(200, 200, 200, 1); /* Color of font of dropdown list */
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor: pointer;
+    text-align: center;
+}
+.styleselect {
+    position: absolute;
+    width: 5%;
+    right: 0px;
+    top: 0px;
+}
+.searchbox {
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+    background-color: #424242; /* Background color of the search box */
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    color: rgba(200, 200, 200, 1); /* Color of the font of the search box */
+    width: 79.6%;
+    margin-left: 9.8%;
+}
+.tiles{
+    color: rgba(200, 200, 200, 1); /* Color of the font */
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: flex; /* equal height of the children */
+}
+.header {
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+.clock {
+    font-size: 6em;
+    margin-bottom: 0px;
+}
+.links {
+    position: relative;
+    list-style-image: url('../images/arrow16white.png'); /* Image of the arrow */
+    padding-left: 80px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 100%;
+}
+.col3 {
+    -moz-column-count: 3;
+    -moz-column-gap: 40px;
+}
+.col4 {
+    -moz-column-count: 4;
+    -moz-column-gap: 40px;
+}
+.boxes {
+    display: inline-block;
+    background-color: #424242; /* Background color of the box */
+    box-shadow: -3px 4px 0px 0px rgba(0,0,0,0.45); /* Color of the shadow of the box */
+    border: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 8px;
+    margin-right: 1%;
+}
+.box1 {
+    float: left;
+    width: 19%;
+    margin-left: auto;
+}
+.box2 {
+    width: 40%;
+}
+.box3 {
+    width: 19%;
+    margin-right: auto;
+}
+.box4 {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.box5 {
+    width: 45%;
+    margin-left: auto;
+}
+.box6 {
+    width: 34%;
+    margin-right: auto;
+}

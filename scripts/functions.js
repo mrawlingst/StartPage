@@ -206,6 +206,9 @@ function parseCommand(com) {
     else if (new RegExp("^trello$").test(com)) {
         nav("https://trello.com/");
     }
+    else if (new RegExp("^facebook$").test(com) || new RegExp("^fb$").test(com)) {
+        nav("https://www.facebook.com/");
+    }
     // ADD NEW CUSTOM COMMANDS HERE
     
     // DO NOT CHANGE ANYTHING BELOW THIS

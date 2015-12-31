@@ -127,6 +127,9 @@ function parseCommand(com) {
         if (new RegExp("^wowhead [A-Za-z]{1,100}$").test(com) || new RegExp("^wh [A-Za-z]{1,100}$").test(com) || new RegExp("^wow [A-Za-z]{1,100}$").test(com)) {
             nav("http://www.wowhead.com/search?q=" + com.split(" ").pop());
         }
+        else {
+            search();
+        }
     }
     // Set search engine command
     else if (com.startsWith("set") == true) {

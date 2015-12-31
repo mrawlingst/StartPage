@@ -1,6 +1,6 @@
 body {
     background-image: url("../images/wallpaper-nebula.png"); /* Set image of the wallpaper */
-    background-size: cover; /* Size of the background for the page */
+    background-size: fill; /* Size of the background for the page */
     word-wrap: break-word;
     overflow: visible;
 }

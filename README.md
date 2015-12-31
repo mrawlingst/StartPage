@@ -20,5 +20,6 @@ The links will take you to a screenshot of the style.
 - [Link & Zelda](screenshots/screenshot-link&zelda.png) - actually is the original style from [here](https://github.com/fukouda/Startpage).
 - [Blues](screenshots/screenshot-blues.png) - created by CursedShadow
 - [MiniBlack](screenshots/screenshot-miniblack.png) - created by me.
+- [MiniBlackv2](screenshots/screenshot-miniblackv2.png) - based on MiniBlack by CursedShadow
 
 More to come.

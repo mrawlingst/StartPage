@@ -123,10 +123,9 @@ function parseCommand(com) {
         }
     }
     // Wowhead command
-    else if (com.startsWith("wowhead") == true || com.startsWith("wh") == true) {
-        if (new RegExp("^wowhead [A-Za-z]{1,100}$").test(com) || new RegExp("^wh [A-Za-z]{1,100}$").test(com)) {
-            var arg = com.split(" ").pop();
-            nav("http://www.wowhead.com/search?q=" + arg);
+    else if (com.startsWith("wowhead") == true || com.startsWith("wh") == true || com.startsWith("wow") == true) {
+        if (new RegExp("^wowhead [A-Za-z]{1,100}$").test(com) || new RegExp("^wh [A-Za-z]{1,100}$").test(com) || new RegExp("^wow [A-Za-z]{1,100}$").test(com)) {
+            nav("http://www.wowhead.com/search?q=" + com.split(" ").pop());
         }
     }
     // Set search engine command

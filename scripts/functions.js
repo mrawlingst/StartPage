@@ -28,7 +28,9 @@ function defaultfunc() {
 
 // Change style on dropdown list select
 function dropdownStyleSelect() {
-    changeStyle(document.getElementById('styleSource').value);
+    if (document.getElementById('styleSource').value != "styles") {
+        changeStyle(document.getElementById('styleSource').value);
+    }
 }
 
 // Change style

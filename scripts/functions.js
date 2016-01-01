@@ -129,6 +129,9 @@ function parseCommand(com) {
         if (new RegExp("^(wowhead|wh|wow) [A-Za-z0-9 ]{1,100}$").test(com)) {
             nav("http://www.wowhead.com/search?q=" + com.split(' ').slice(1).join(' '));
         }
+        else if (new RegExp("^(wowhead|wh|wow)$").test(com)) {
+            nav("http://www.wowhead.com/");
+        }
         else {
             search();
         }

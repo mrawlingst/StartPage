@@ -83,7 +83,7 @@ function saveAndClear(engine) {
 // Parse commands
 function parseCommand(com) {
     // Readme command
-    if (new RegExp("^readme").test(com)) {
+    if (new RegExp("^readme$").test(com)) {
 		document.location.href = "https://github.com/mrawlingst/StartPage/blob/master/README.md";
 	}
     // Help command
@@ -125,7 +125,7 @@ function parseCommand(com) {
         }
     }
     // Wowhead command
-    else if (com.startsWith("wowhead") == true || com.startsWith("wh") == true || com.startsWith("wow") == true) {
+    else if (new RegExp("^(wowhead|wh|wow)").test(com)) {
         if (new RegExp("^(wowhead|wh|wow) [A-Za-z0-9 ]{1,100}$").test(com)) {
             nav("http://www.wowhead.com/search?q=" + com.split(' ').slice(1).join(' '));
         }

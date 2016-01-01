@@ -181,7 +181,7 @@ function parseCommand(com) {
                     
                 // ADD NEW SEARCH ENGINES HERE
                 
-                // DO NOT TOUCH BELOW                    
+                // DO NOT TOUCH BELOW
                 default:
                     break;
             }
@@ -203,13 +203,13 @@ function parseCommand(com) {
     else if (new RegExp("^git(hub)?$").test(com)) {
         nav("https://www.github.com");
     }
-    else if (new RegExp("^netflix$").test(com) || new RegExp("^nf$").test(com)) {
+    else if (new RegExp("^(netflix|nf)$").test(com)) {
         nav("https://www.netflix.com/");
     }
     else if (new RegExp("^trello$").test(com)) {
         nav("https://trello.com/");
     }
-    else if (new RegExp("^facebook$").test(com) || new RegExp("^fb$").test(com)) {
+    else if (new RegExp("^(facebook|fb)$").test(com)) {
         nav("https://www.facebook.com/");
     }
     // ADD NEW CUSTOM COMMANDS HERE

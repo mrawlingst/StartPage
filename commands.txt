@@ -1,13 +1,13 @@
-#The following is a list of all of the commands available in my startpage terminal
+# The following is a list of all of the commands available in my startpage terminal
 # Click the back button or press alt + left arrow to go back to the startpage
 
 ## GENERAL ##
 [URL]
-	Goes straight to that url, as long as it is valid.
+    Goes straight to that url, as long as it is valid.
 [search query]
-	Searches the query
+    Searches the query
 help | commands | ?
-	Show this list
+    Show this list
 
 ## SEARCH ENGINE ##
 set [arg]
@@ -34,29 +34,31 @@ set [arg]
 
 ## REDDIT ##
 reddit
-	Go to reddit
+    Go to reddit
 reddit [-r] [arg]
-	-r  Go to subreddit [arg]
+    -r  Go to subreddit [arg]
 reddit [gd][sp][prog]
-	gd    /r/GameDev
-	prog  /r/Programming
-	sp    /r/Startpages
+    gd    /r/GameDev
+    prog  /r/Programming
+    sp    /r/Startpages
 reddit [arg]
     It will attempt to go to that subreddit if valid.
     
 ## WOWHEAD ##
-wh|wowhead [arg]
+wh|wow|wowhead
+    Go to wowhead
+wh|wow|wowhead [arg]
     It will attempt to search keywords in wowhead's query
 
 ## MISC ##
 inbox
-	Opens gmail
+    Opens gmail
 rit inbox
     Opens school's gmail
 twitch, ttv
-	twitch (director/all)
+    twitch (director/all)
 twitch|ttv [username]
-	twitch.tv/[username]
+    twitch.tv/[username]
 git|github
     Goes to github
 netflix|nf

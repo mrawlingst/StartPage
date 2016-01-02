@@ -1,0 +1,150 @@
+{
+    "commands":
+    [
+        {
+            "alias": ["reddit"],
+            "url": "www.reddit.com",
+            "searchURL": "https://www.reddit.com/search?q=",
+            "args":
+            {
+                "url": "https://www.reddit.com/r/",
+                "items":
+                [
+                    { "arg" : "all", "url": "https://www.reddit.com/r/all" },
+                    { "arg" : "sp", "url": "https://www.reddit.com/r/startpages" }
+                ]
+            }
+        },
+        {
+            "alias": ["google"],
+            "url": "www.google.com"
+        }
+    ],
+    "links":
+    [
+        {
+            "id": "box1",
+            "title": "Box1 Title",
+            "items":
+            [
+                {
+                    "item": "Link 1",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 2",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 3",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 4",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 5",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "id": "box2",
+            "title": "Box2 Title",
+            "items":
+            [
+                {
+                    "item": "Link 6",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 7",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 8",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 9",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 10",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "id": "box3",
+            "title": "Box3 Title",
+            "items":
+            [
+                {
+                    "item": "Link 11",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 12",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 13",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 14",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 15",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 16",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 17",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 18",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "id": "box4",
+            "title": "Box4 Title",
+            "items":
+            [
+                {
+                    "item": "Link 19",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 20",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 21",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 22",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 23",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 24",
+                    "url": "#"
+                }
+            ]
+        }
+    ]
+}

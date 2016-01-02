@@ -11,6 +11,7 @@ On top of the original, I've added few upgrades to it.
     - To create your own custom commands, go [here](tutorials/custom_commands.md).
 - The commands and links are located in json file and should no longer be affected by any changes to index.html or function.js.
     - This allows users to retain their customizations in future updates (with little or no changes required).
+    - To add your own links, go [here](tutorials/custom_links.md).
     
 #### Issues
 - Styles dropdown list does not update the selected item to current style in a new session.

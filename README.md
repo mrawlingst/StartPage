@@ -25,6 +25,6 @@ The links will take you to a screenshot of the style.
 - [MiniBlackv2](screenshots/screenshot-miniblackv2.png) - based on MiniBlack by CursedShadow
 - [Nebula](screenshots/screenshot-nebula.png) - created by mrawlingst
 - [Hypercube](screenshots/screenshot-hypercube.png) - created by CursedShadow
-- [Fallout](screenshots/screenshot-fallout.png) - created by CursedShadow
+- [Fallout](screenshots/screenshot-fallout.jpg) - created by CursedShadow
 
 More to come.

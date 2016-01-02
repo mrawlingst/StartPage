@@ -31,8 +31,8 @@ function defaultfunc() {
     document.getElementById("search box").focus();
 }
 
+// Load json file
 function loadData() {
-    // Load json file
     $.ajax({
        url: 'json/data.json',
        dataType: "json",
@@ -43,6 +43,8 @@ function loadData() {
        },
        success: function(data) {
            jsonData = data;
+           // Add links to start page from json
+           updateLinks();
        }
     });
 }
@@ -99,6 +101,43 @@ function saveAndClear(engine) {
     searchEngine = engine;
     localStorage.setItem("searchengine", searchEngine);
     document.getElementById("search box").value = "";
+}
+
+// Update links on page
+function updateLinks() {
+    var i;
+    for (i = 0; i < jsonData.links.length; i++) {
+        var docHeader = document.getElementById(jsonData.links[i].id + "-alias");
+        var docList = document.getElementById(jsonData.links[i].id + "-list");
+        
+        // Header
+        var headerNode = document.createElement("h2");
+        headerNode.className = "header";
+        headerNode.id = jsonData.links[i].id + "-alias";
+        var textNode = document.createTextNode(jsonData.links[i].alias);
+        headerNode.appendChild(textNode);
+        docHeader.parentNode.replaceChild(headerNode, docHeader);
+        
+        // Remove list (if any)
+        var j;
+        for (j = docList.childNodes.length - 1; j > 0; j--) {
+            docList.removeChild(docList.childNodes[j]);
+        }
+        
+        // Add links from json
+        if (jsonData.links[i].items) {
+            for (j = 0; j < jsonData.links[i].items.length; j++) {
+                var listNode = document.createElement("li");
+                var linkNode = document.createElement("a");
+                textNode = document.createTextNode(jsonData.links[i].items[j].item);
+                listNode.appendChild(linkNode);
+                linkNode.appendChild(textNode);
+                linkNode.href = jsonData.links[i].items[j].url;
+                linkNode.className = "bigLink";
+                docList.appendChild(listNode);
+            }
+        }
+    }
 }
 
 // Parse commands

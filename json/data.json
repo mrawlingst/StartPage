@@ -2,15 +2,6 @@
     "commands":
     [
         {
-            "alias": ["google", "go"],
-            "url": "https://www.google.com/",
-            "searchURL": "https://www.google.com/?gws_rd=ssl#q="
-        },
-        {
-            "alias": ["facebook", "fb"],
-            "url": "https://www.facebook.com/"
-        },
-        {
             "alias": ["reddit"],
             "url": "www.reddit.com",
             "searchURL": "https://www.reddit.com/search?q=",
@@ -19,79 +10,141 @@
                 "url": "https://www.reddit.com/r/",
                 "items":
                 [
-                    { "arg" : "gd", "url": "https://www.reddit.com/r/gamedev" },
+                    { "arg" : "all", "url": "https://www.reddit.com/r/all" },
                     { "arg" : "sp", "url": "https://www.reddit.com/r/startpages" }
                 ]
             }
         },
         {
-            "alias": ["twitch", "ttv"],
-            "url": "http://www.twitch.tv/directory/all",
-            "args":
-            {
-                "url": "http://www.twitch.tv/"
-            }
-        },
-        {
-            "alias": ["wowhead", "wh", "wow"],
-            "url": "http://www.wowhead.com/",
-            "searchURL": "http://www.wowhead.com/search?q="
-        },
-        {
-            "alias": ["duckduckgo", "ddg", "d"],
-            "url": "https://duckduckgo.com/",
-            "searchURL": "https://duckduckgo.com/"
-        },
-        {
-            "alias": ["bing", "b"],
-            "url": "http://www.bing.com/",
-            "searchURL": "https://www.bing.com/search?q="
-        },
-        {
-            "alias": ["github", "gh", "git"],
-            "url": "https://github.com/",
-            "searchURL": "https://github.com/search?utf8=%E2%9C%93&q="
-        },
-        {
-            "alias": ["inbox", "gmail"],
-            "url": "https://mail.google.com"
-        },
-        {
-            "alias": ["rit inbox", "rit gmail"],
-            "url": "https://mail.google.com/mail/u/1/"
-        },
-        {
-            "alias": ["netflix", "nf"],
-            "url": "https://www.netflix.com/"
-        },
-        {
-            "alias": ["trello"],
-            "url": "https://trello.com/"
+            "alias": ["google"],
+            "url": "www.google.com"
         }
     ],
     "links":
-    {
-        "box1":
+    [
         {
-            "alias": "Entertainment",
+            "id": "box1",
+            "alias": "Box1 Title",
             "items":
             [
                 {
-                    "item": "facebook",
-                    "url": "www.facebook.com"
+                    "item": "Link 1",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 2",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 3",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 4",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 5",
+                    "url": "#"
                 }
             ]
         },
-        "box2":
         {
-            "alias": "Programming",
+            "id": "box2",
+            "alias": "Box2 Title",
             "items":
             [
                 {
-                    "item": "github",
-                    "url": "www.github.com"
+                    "item": "Link 6",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 7",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 8",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 9",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 10",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "id": "box3",
+            "alias": "Box3 Title",
+            "items":
+            [
+                {
+                    "item": "Link 11",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 12",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 13",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 14",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 15",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 16",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 17",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 18",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "id": "box4",
+            "alias": "Box4 Title",
+            "items":
+            [
+                {
+                    "item": "Link 19",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 20",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 21",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 22",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 23",
+                    "url": "#"
+                },
+                {
+                    "item": "Link 24",
+                    "url": "#"
                 }
             ]
         }
-    }
+    ]
 }

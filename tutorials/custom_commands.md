@@ -75,6 +75,3 @@ Another example with simple command:
 - `google` - opens www.google.com
 
 I highly recommend updating commands.txt to reflect new commands you added.
-
-#### Functions
-- `nav(address);` - this function will attempt to open the address given.

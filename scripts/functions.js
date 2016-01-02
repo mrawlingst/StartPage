@@ -172,6 +172,8 @@ function parseCommand(com) {
                 }
             }
         }
+        
+        return;
     }
     
     var c;

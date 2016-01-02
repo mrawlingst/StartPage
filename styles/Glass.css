@@ -1,0 +1,137 @@
+body {
+    background-image: url("../images/wallpaper-glass.png"); /* Set image of the wallpaper */
+    background-size: cover; /* Size of the background for the page */
+    word-wrap: break-word;
+    overflow: visible;
+}
+hr {
+    width: 80%;
+    border-color: rgba(0,0,0,0.25); /* Color of horizontal rule */
+    background-color: rgba(0,0,0,0.05); /* Color of horizontal rule's background */
+    box-shadow: none; /* Shadow for horizontal rule */
+}
+a:link {
+    color: #555; /* Color of link */
+    opacity: .5;
+}
+a:visited {
+    color: #000; /* Color of visited link */
+}
+a:hover {
+    color: #000; /* Color of the link hovered */
+    transition: all .3s ease;
+}
+a:active {
+    color: #000; /* Color of link when clicked */
+}
+li {
+    margin-bottom: 5px;
+}
+
+.container2 {
+    max-height: 80vh;
+    max-width: 90vw;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.select {
+    border: 0;
+    box-shadow: none;
+    background-color: none; /* Background color of dropdown list */
+    color: #555; /* Color of font of dropdown list */
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor: pointer;
+    text-align: center;
+}
+.styleselect {
+    position: absolute;
+    width: 5%;
+    right: 0px;
+    top: 0px;
+    opacity: .5;
+}
+.searchbox {
+    background-color: inherit;
+    border: none;
+    box-shadow: 0px 0px 15px #000;
+    background-color: #EEE; /* Background color of the search box */
+    opacity: .6;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    color: #555; /* Color of the font of the search box */
+    width: 79.4%;
+    margin-left: 10%;
+}
+.tiles{
+    color: #555; /* Color of the font */
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: flex; /* equal height of the children */
+}
+.header {
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+.clock {
+    font-size: 6em;
+    margin-bottom: 0px;
+}
+.links {
+    position: relative;
+    list-style-image: url('../images/arrow16.png'); /* Image of the arrow */
+    padding-left: 80px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 100%;
+}
+.col3 {
+    -moz-column-count: 3;
+    -moz-column-gap: 40px;
+}
+.col4 {
+    -moz-column-count: 4;
+    -moz-column-gap: 40px;
+}
+.boxes {
+    display: inline-block;
+    background-color: #EEE; /* Background color of the box */
+    opacity: .6;
+    box-shadow: 0px 0px 15px #000; /* Color of the shadow of the box */
+    border: none;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 8px;
+    margin-right: 1%;
+}
+.box1 {
+    float: left;
+    width: 19%;
+    margin-left: auto;
+}
+.box2 {
+    width: 40%;
+}
+.box3 {
+    width: 19%;
+    margin-right: auto;
+}
+.box4 {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.box5 {
+    width: 45%;
+    margin-left: auto;
+}
+.box6 {
+    width: 34%;
+    margin-right: auto;
+}

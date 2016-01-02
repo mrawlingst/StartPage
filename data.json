@@ -24,7 +24,7 @@
     [
         {
             "id": "box1",
-            "alias": "Box1 Title",
+            "title": "Box1 Title",
             "items":
             [
                 {
@@ -51,7 +51,7 @@
         },
         {
             "id": "box2",
-            "alias": "Box2 Title",
+            "title": "Box2 Title",
             "items":
             [
                 {
@@ -78,7 +78,7 @@
         },
         {
             "id": "box3",
-            "alias": "Box3 Title",
+            "title": "Box3 Title",
             "items":
             [
                 {
@@ -117,7 +117,7 @@
         },
         {
             "id": "box4",
-            "alias": "Box4 Title",
+            "title": "Box4 Title",
             "items":
             [
                 {

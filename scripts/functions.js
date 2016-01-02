@@ -107,14 +107,14 @@ function saveAndClear(engine) {
 function updateLinks() {
     var i;
     for (i = 0; i < jsonData.links.length; i++) {
-        var docHeader = document.getElementById(jsonData.links[i].id + "-alias");
+        var docHeader = document.getElementById(jsonData.links[i].id + "-title");
         var docList = document.getElementById(jsonData.links[i].id + "-list");
         
         // Header
         var headerNode = document.createElement("h2");
         headerNode.className = "header";
-        headerNode.id = jsonData.links[i].id + "-alias";
-        var textNode = document.createTextNode(jsonData.links[i].alias);
+        headerNode.id = jsonData.links[i].id + "-title";
+        var textNode = document.createTextNode(jsonData.links[i].title);
         headerNode.appendChild(textNode);
         docHeader.parentNode.replaceChild(headerNode, docHeader);
         

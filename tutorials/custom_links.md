@@ -8,7 +8,7 @@ Go to `data.json` and within brackets of `"links":`
 [
     {
         "id": "", // DO NOT TOUCH OR CHANGE THIS VALUE AT ALL
-        "alias": "",
+        "title": "",
         "items":
         [
             {
@@ -23,7 +23,7 @@ Go to `data.json` and within brackets of `"links":`
 You can add new links inside `"items"`.
 
 - `"id"` - **DO NOT TOUCH OR CHANGE THIS VALUE AT ALL.**
-- `"alias"` - **required** - the title you want to display for the box.
+- `"title"` - **required** - the title you want to display for the box.
 - `"items"` - **required**
     - `"item"` - **required** - the text you want to display.
     - `"url"` - **required** - the url to go to when clicked.
@@ -34,7 +34,7 @@ Here is an example:
 [
     {
         "id": "", // DO NOT TOUCH OR CHANGE THIS VALUE AT ALL
-        "alias": "Entertainment",
+        "title": "Entertainment",
         "items":
         [
             {

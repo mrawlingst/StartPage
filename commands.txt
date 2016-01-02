@@ -1,67 +1,20 @@
-# The following is a list of all of the commands available in my startpage terminal
+# The following is a list of all of the commands available in startpage terminal
 # Click the back button or press alt + left arrow to go back to the startpage
+
+## NOTE ## Your custom commands from json/data.json will not show up in here! ## NOTE ##
 
 ## GENERAL ##
 [URL]
     Goes straight to that url, as long as it is valid.
 [search query]
     Searches the query
-help | commands | ?
+help | commands | cmd | ?
     Show this list
 
 ## SEARCH ENGINE ##
 set [arg]
     Sets search engine to given arg.
         - The textbox will clear if it SUCCEED.
-        - The textbox will not clear if it FAILS.
+        - The textbox will not clear if it FAILED.
         
-    Available search engines (and keywords):
-    - google
-        - g
-    - duckduckgo
-        - d
-        - ddg
-    - bing
-        - b
-    - reddit
-        - r
-    - github
-        - g
-        - gh
-    - wowhead
-        - wow
-        - wh
-
-## REDDIT ##
-reddit
-    Go to reddit
-reddit [-r] [arg]
-    -r  Go to subreddit [arg]
-reddit [gd][sp][prog]
-    gd    /r/GameDev
-    prog  /r/Programming
-    sp    /r/Startpages
-reddit [arg]
-    It will attempt to go to that subreddit if valid.
-    
-## WOWHEAD ##
-wh|wow|wowhead
-    Go to wowhead
-wh|wow|wowhead [arg]
-    It will attempt to search keywords in wowhead's query
-
-## MISC ##
-inbox
-    Opens gmail
-rit inbox
-    Opens school's gmail
-twitch, ttv
-    twitch (director/all)
-twitch|ttv [username]
-    twitch.tv/[username]
-git|github
-    Goes to github
-netflix|nf
-    Goes to netflix
-trello
-    Goes to trello
+    Available search engines can be found in json/data.json with "searchURL".

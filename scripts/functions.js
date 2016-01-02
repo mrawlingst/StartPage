@@ -34,7 +34,7 @@ function defaultfunc() {
 // Load json file
 function loadData() {
     $.ajax({
-       url: 'json/data.json',
+       url: 'data.json',
        dataType: "json",
        beforeSend : function(x) {
            if (x && x.overrideMimeType) {

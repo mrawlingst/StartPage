@@ -4,8 +4,13 @@ var urlPattern = new RegExp("^(https?://)?[^ ]+[.][^ ]+([.][^ ]+)*(/[^ ]+)?$");
 // Current search engine
 var searchEngine;
 
+// JSON data
+var jsonData;
+
 // Function to run on load
 function defaultfunc() {
+    loadData();
+    
     // Load saved style from local storage
     var loadedStyle = localStorage.getItem("style");
     if (loadedStyle == null) {
@@ -24,6 +29,22 @@ function defaultfunc() {
     // Grab focus and clear search box
     document.getElementById("search box").value = "";
     document.getElementById("search box").focus();
+}
+
+function loadData() {
+    // Load json file
+    $.ajax({
+       url: 'json/data.json',
+       dataType: "json",
+       beforeSend : function(x) {
+           if (x && x.overrideMimeType) {
+               x.overrideMimeType("application/json;charset=UTF-8");
+           }
+       },
+       success: function(data) {
+           jsonData = data;
+       }
+    });
 }
 
 // Change style on dropdown list select
@@ -82,141 +103,73 @@ function saveAndClear(engine) {
 
 // Parse commands
 function parseCommand(com) {
+    // Some hardcoded commands for general purpose
     // Readme command
     if (new RegExp("^readme$").test(com)) {
-		document.location.href = "https://github.com/mrawlingst/StartPage/blob/master/README.md";
-	}
-    // Help command
-    else if (new RegExp("^help$").test(com) || new RegExp("^commands$").test(com) || new RegExp("^\\?$").test(com)) {
-		document.location.href = "commands.txt";
-	}
-    // Reddit command
-    else if (com.startsWith("reddit") == true) {
-        if (new RegExp("^reddit [A-Za-z]{1,10}$").test(com)) {
-            var subargs = com.split(" ");
-            var arg = subargs.pop();
-            switch (arg) {
-                case "gd":
-                    nav("https://www.reddit.com/r/gamedev");
-                    break;
-                case "sp":
-                    nav("https://www.reddit.com/r/startpages");
-                    break;
-                case "prog":
-                    nav("https://www.reddit.com/r/programming");
-                    break;
-                default:
-                    nav("https://www.reddit.com/r/" + arg);
-                    break;
-            }
-        }
-        else if (new RegExp("^reddit -r .*$").test(com)) {
-            var sargs = com.split(" ");
-            nav("https://www.reddit.com/r/" + sargs.pop());
-        }
-        else if (new RegExp("^reddit$").test(com)) {
-            nav("https://www.reddit.com/");
-        }
-        else if (urlPattern.test(com)) {
-            nav(com);
-        }
-        else {
-            search();
-        }
+        document.location.href = "https://github.com/mrawlingst/StartPage/blob/master/README.md";
+        return;
     }
-    // Wowhead command
-    else if (new RegExp("^(wowhead|wh|wow)").test(com)) {
-        if (new RegExp("^(wowhead|wh|wow) [A-Za-z0-9 ]{1,100}$").test(com)) {
-            nav("http://www.wowhead.com/search?q=" + com.split(' ').slice(1).join(' '));
-        }
-        else if (new RegExp("^(wowhead|wh|wow)$").test(com)) {
-            nav("http://www.wowhead.com/");
-        }
-        else {
-            search();
-        }
+    // Help command
+    else if (new RegExp("^(help|commands|cmd|\\?)$").test(com)) {
+        document.location.href = "commands.txt";
+        return;
+    }
+    // Reload the json file, updating commands
+    else if (new RegExp("^reload$").test(com)) {
+        loadData();
+        document.getElementById("search box").value = "";
+        return;
     }
     // Set search engine command
     else if (com.startsWith("set") == true) {
-        if (new RegExp("^set [A-Za-z]{1,10}$").test(com)) {
-            switch (com.split(" ").pop()) {
-                // Google
-                case "g":
-                case "google":
-                    saveAndClear("https://www.google.com/?gws_rd=ssl#q=");
-                    break;
-                
-                // DuckDuckGo
-                case "d":
-                case "ddg":
-                case "duckduckgo":
-                    saveAndClear("https://www.duckduckgo.com/");
-                    break;
-                
-                // Bing
-                case "b":
-                case "bing":
-                    saveAndClear("https://www.bing.com/search?q=");
-                    break;
-                    
-                // Reddit
-                case "r":
-                case "reddit":
-                    saveAndClear("https://www.reddit.com/search?q=");
-                    break;
-                
-                // Github
-                case "g":
-                case "gh":
-                case "github":
-                    saveAndClear("https://github.com/search?utf8=%E2%9C%93&q=");
-                    break;
-                
-                // Wowhead
-                case "wow":
-                case "wh":
-                case "wowhead":
-                    saveAndClear("http://www.wowhead.com/search?q=");
-                    break;
-                    
-                // ADD NEW SEARCH ENGINES HERE
-                
-                // DO NOT TOUCH BELOW
-                default:
-                    break;
+        for (c = 0; c < jsonData.commands.length; c++) {
+            var a;
+            for (a = 0; a < jsonData.commands[c].alias.length; a++) {
+                if (jsonData.commands[c].searchURL) {
+                    if (new RegExp("^set "+jsonData.commands[c].alias[a]+"$").test(com)) {
+                        saveAndClear(jsonData.commands[c].searchURL);
+                        return;
+                    }
+                }
             }
         }
     }
-    // Miscalleous commands
-    else if (new RegExp("^inbox$").test(com)) {
-        nav("https://mail.google.com");
-    }
-    else if (new RegExp("^rit inbox$").test(com)) {
-        nav("https://mail.google.com/mail/u/1/");
-    }
-    else if (new RegExp("^(twitch|ttv)$").test(com)) {
-        nav("http://www.twitch.tv/directory/all");
-    }
-    else if (new RegExp("^(twitch|ttv) [^ ]+$").test(com)) {
-		nav("http://www.twitch.tv/" + com.split(" ").pop());
-	}
-    else if (new RegExp("^git(hub)?$").test(com)) {
-        nav("https://www.github.com");
-    }
-    else if (new RegExp("^(netflix|nf)$").test(com)) {
-        nav("https://www.netflix.com/");
-    }
-    else if (new RegExp("^trello$").test(com)) {
-        nav("https://trello.com/");
-    }
-    else if (new RegExp("^(facebook|fb)$").test(com)) {
-        nav("https://www.facebook.com/");
-    }
-    // ADD NEW CUSTOM COMMANDS HERE
     
-    // DO NOT CHANGE ANYTHING BELOW THIS
-    else if (urlPattern.test(com)) {
+    var c;
+    // Commands
+    for (c = 0; c < jsonData.commands.length; c++) {
+        var a;
+        for (a = 0; a < jsonData.commands[c].alias.length; a++) {
+            if (jsonData.commands[c].args && new RegExp("^"+ jsonData.commands[c].alias[a]+" [A-Za-z]{1,10}$").test(com)) {
+                if (jsonData.commands[c].args.url) {
+                    if (jsonData.commands[c].args.items) {
+                        var i;
+                        for (i = 0; i < jsonData.commands[c].args.items.length; i++) {
+                            if (jsonData.commands[c].args.items[i].arg == com.split(" ").pop()) {
+                                nav(jsonData.commands[c].args.items[i].url);
+                                return;
+                            }
+                        }
+                    }
+                    
+                    nav(jsonData.commands[c].args.url + com.split(' ').pop());
+                    return;
+                }
+            }
+            else if (jsonData.commands[c].searchURL && new RegExp("^"+ jsonData.commands[c].alias[a]+" .*$").test(com)) {
+                nav(jsonData.commands[c].searchURL + com.split(' ').slice(1).join(' '));
+                return;
+            }
+            else if (new RegExp("^"+jsonData.commands[c].alias[a]+"$").test(com)) {
+                nav(jsonData.commands[c].url);
+                return;
+            }
+        }
+    }
+    
+    if (urlPattern.test(com)) {
         nav(com);
+        return;
     }
     else {
         search();

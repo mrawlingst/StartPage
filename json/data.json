@@ -1,0 +1,97 @@
+{
+    "commands":
+    [
+        {
+            "alias": ["google", "go"],
+            "url": "https://www.google.com/",
+            "searchURL": "https://www.google.com/?gws_rd=ssl#q="
+        },
+        {
+            "alias": ["facebook", "fb"],
+            "url": "https://www.facebook.com/"
+        },
+        {
+            "alias": ["reddit"],
+            "url": "www.reddit.com",
+            "searchURL": "https://www.reddit.com/search?q=",
+            "args":
+            {
+                "url": "https://www.reddit.com/r/",
+                "items":
+                [
+                    { "arg" : "gd", "url": "https://www.reddit.com/r/gamedev" },
+                    { "arg" : "sp", "url": "https://www.reddit.com/r/startpages" }
+                ]
+            }
+        },
+        {
+            "alias": ["twitch", "ttv"],
+            "url": "http://www.twitch.tv/directory/all",
+            "args":
+            {
+                "url": "http://www.twitch.tv/"
+            }
+        },
+        {
+            "alias": ["wowhead", "wh", "wow"],
+            "url": "http://www.wowhead.com/",
+            "searchURL": "http://www.wowhead.com/search?q="
+        },
+        {
+            "alias": ["duckduckgo", "ddg", "d"],
+            "url": "https://duckduckgo.com/",
+            "searchURL": "https://duckduckgo.com/"
+        },
+        {
+            "alias": ["bing", "b"],
+            "url": "http://www.bing.com/",
+            "searchURL": "https://www.bing.com/search?q="
+        },
+        {
+            "alias": ["github", "gh", "git"],
+            "url": "https://github.com/",
+            "searchURL": "https://github.com/search?utf8=%E2%9C%93&q="
+        },
+        {
+            "alias": ["inbox", "gmail"],
+            "url": "https://mail.google.com"
+        },
+        {
+            "alias": ["rit inbox", "rit gmail"],
+            "url": "https://mail.google.com/mail/u/1/"
+        },
+        {
+            "alias": ["netflix", "nf"],
+            "url": "https://www.netflix.com/"
+        },
+        {
+            "alias": ["trello"],
+            "url": "https://trello.com/"
+        }
+    ],
+    "links":
+    {
+        "box1":
+        {
+            "alias": "Entertainment",
+            "items":
+            [
+                {
+                    "item": "facebook",
+                    "url": "www.facebook.com"
+                }
+            ]
+        },
+        "box2":
+        {
+            "alias": "Programming",
+            "items":
+            [
+                {
+                    "item": "github",
+                    "url": "www.github.com"
+                }
+            ]
+        }
+    }
+}

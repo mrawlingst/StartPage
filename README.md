@@ -27,5 +27,6 @@ The links will take you to a screenshot of the style.
 - [Hypercube](screenshots/screenshot-hypercube.png) - created by CursedShadow
 - [Fallout](screenshots/screenshot-fallout.jpg) - created by CursedShadow
 - [Glass](screenshots/screenshot-glass.jpg) - based on [Glass](https://www.reddit.com/r/startpages/comments/2d0tf0/glass/) by [bisexualobster](https://www.reddit.com/user/bisexualobster)
+- [Zomboi](screenshots/screenshot-zomboi.png) - created by mrawlingst
 
 More to come.

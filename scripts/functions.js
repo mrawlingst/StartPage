@@ -132,7 +132,7 @@ function updateLinks() {
                 textNode = document.createTextNode(jsonData.links[i].items[j].item);
                 listNode.appendChild(linkNode);
                 linkNode.appendChild(textNode);
-                linkNode.href = jsonData.links[i].items[j].url;
+                linkNode.href = jsonData.links[i].items[j].url.trim();
                 linkNode.className = "bigLink";
                 docList.appendChild(listNode);
             }
@@ -166,7 +166,7 @@ function parseCommand(com) {
             for (a = 0; a < jsonData.commands[c].alias.length; a++) {
                 if (jsonData.commands[c].searchURL) {
                     if (new RegExp("^set "+jsonData.commands[c].alias[a]+"$").test(com)) {
-                        saveAndClear(jsonData.commands[c].searchURL);
+                        saveAndClear(jsonData.commands[c].searchURL.trim());
                         return;
                     }
                 }
@@ -186,21 +186,21 @@ function parseCommand(com) {
                         var i;
                         for (i = 0; i < jsonData.commands[c].args.items.length; i++) {
                             if (jsonData.commands[c].args.items[i].arg == com.split(" ").pop()) {
-                                nav(jsonData.commands[c].args.items[i].url);
+                                nav(jsonData.commands[c].args.items[i].url.trim());
                                 return;
                             }
                     }
                     
-                    nav(jsonData.commands[c].args.url + com.split(' ').pop());
+                    nav(jsonData.commands[c].args.url.trim() + com.split(' ').pop());
                     return;
                 }
             }
             else if (jsonData.commands[c].searchURL && new RegExp("^"+ jsonData.commands[c].alias[a]+" .*$").test(com)) {
-                nav(jsonData.commands[c].searchURL + com.split(' ').slice(1).join(' '));
+                nav(jsonData.commands[c].searchURL.trim() + com.split(' ').slice(1).join(' '));
                 return;
             }
             else if (new RegExp("^"+jsonData.commands[c].alias[a]+"$").test(com)) {
-                nav(jsonData.commands[c].url);
+                nav(jsonData.commands[c].url.trim());
                 return;
             }
         }

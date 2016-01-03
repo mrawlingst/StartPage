@@ -181,8 +181,7 @@ function parseCommand(com) {
     for (c = 0; c < jsonData.commands.length; c++) {
         var a;
         for (a = 0; a < jsonData.commands[c].alias.length; a++) {
-            if (jsonData.commands[c].args && new RegExp("^"+ jsonData.commands[c].alias[a]+" [A-Za-z]$").test(com)) {
-                if (jsonData.commands[c].args.url) {
+            if (jsonData.commands[c].args && new RegExp("^"+ jsonData.commands[c].alias[a]+" [A-Za-z]{1,}$").test(com)) {
                     if (jsonData.commands[c].args.items) {
                         var i;
                         for (i = 0; i < jsonData.commands[c].args.items.length; i++) {
@@ -190,7 +189,6 @@ function parseCommand(com) {
                                 nav(jsonData.commands[c].args.items[i].url);
                                 return;
                             }
-                        }
                     }
                     
                     nav(jsonData.commands[c].args.url + com.split(' ').pop());

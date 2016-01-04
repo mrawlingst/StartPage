@@ -142,6 +142,8 @@ function updateLinks() {
 
 // Parse commands
 function parseCommand(com) {
+    com = com.toLowerCase();
+    
     // Some hardcoded commands for general purpose
     // Readme command
     if (new RegExp("^readme$").test(com)) {
@@ -165,7 +167,7 @@ function parseCommand(com) {
             var a;
             for (a = 0; a < jsonData.commands[c].alias.length; a++) {
                 if (jsonData.commands[c].searchURL) {
-                    if (new RegExp("^set "+jsonData.commands[c].alias[a]+"$").test(com)) {
+                    if (new RegExp("^set "+jsonData.commands[c].alias[a].toLowerCase()+"$").test(com)) {
                         saveAndClear(jsonData.commands[c].searchURL.trim());
                         return;
                     }
@@ -181,11 +183,11 @@ function parseCommand(com) {
     for (c = 0; c < jsonData.commands.length; c++) {
         var a;
         for (a = 0; a < jsonData.commands[c].alias.length; a++) {
-            if (jsonData.commands[c].args && new RegExp("^"+ jsonData.commands[c].alias[a]+" [A-Za-z]{1,}$").test(com)) {
+            if (jsonData.commands[c].args && new RegExp("^"+ jsonData.commands[c].alias[a].toLowerCase()+" [A-Za-z]{1,}$").test(com)) {
                     if (jsonData.commands[c].args.items) {
                         var i;
                         for (i = 0; i < jsonData.commands[c].args.items.length; i++) {
-                            if (jsonData.commands[c].args.items[i].arg == com.split(" ").pop()) {
+                            if (jsonData.commands[c].args.items[i].arg.toLowerCase() == com.split(" ").pop()) {
                                 nav(jsonData.commands[c].args.items[i].url.trim());
                                 return;
                             }
@@ -195,11 +197,11 @@ function parseCommand(com) {
                     return;
                 }
             }
-            else if (jsonData.commands[c].searchURL && new RegExp("^"+ jsonData.commands[c].alias[a]+" .*$").test(com)) {
+            else if (jsonData.commands[c].searchURL && new RegExp("^"+ jsonData.commands[c].alias[a].toLowerCase()+" .*$").test(com)) {
                 nav(jsonData.commands[c].searchURL.trim() + com.split(' ').slice(1).join(' '));
                 return;
             }
-            else if (new RegExp("^"+jsonData.commands[c].alias[a]+"$").test(com)) {
+            else if (new RegExp("^"+jsonData.commands[c].alias[a].toLowerCase()+"$").test(com)) {
                 nav(jsonData.commands[c].url.trim());
                 return;
             }
